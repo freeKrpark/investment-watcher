@@ -15,7 +15,7 @@ func TestMain(m *testing.M) {
 	testApp.App = a
 	testApp.MainWindow = a.NewWindow("")
 	testApp.DB = repository.NewTestRepository()
-
-	os.Exit(m.Run())
+	exitCode := m.Run()
+	os.Exit(exitCode)
 
 }
